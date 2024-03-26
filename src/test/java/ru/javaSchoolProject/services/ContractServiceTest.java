@@ -30,7 +30,9 @@ public class ContractServiceTest {
     @Test
     @DisplayName("Sign invalid contract")
     public void signInvalidContractTest(){
-        assertEquals("Invalid contract data(wrong phone number or user/tariff id)", contractService.signContract(new ContractDto("1","1","877",null)).getMessage());
+        assertEquals("Invalid contract data(wrong phone number or user/tariff id)",
+                contractService.signContract(new ContractDto("1","1","877",null)).getMessage()
+        );
     }
 
     @Test
